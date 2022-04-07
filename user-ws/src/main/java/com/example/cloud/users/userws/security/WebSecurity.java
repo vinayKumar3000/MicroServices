@@ -28,7 +28,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     this.bCryptPasswordEncoder = bCryptPasswordEncoder;
   }
 
-  // 2
+  // 2 while initializing
   // throws Exception
   @Override
   public void configure(HttpSecurity http) throws Exception {
@@ -47,7 +47,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     return authenticationFilter;
   }
 
-  // 1
+  // 1 while initializing
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     auth.userDetailsService(userService).passwordEncoder(bCryptPasswordEncoder);

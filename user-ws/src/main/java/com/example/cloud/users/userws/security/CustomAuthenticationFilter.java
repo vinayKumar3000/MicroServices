@@ -65,8 +65,8 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
       HttpServletResponse res,
       FilterChain chain,
       Authentication auth) throws IOException, ServletException {
-    String userName = ((User) auth.getPrincipal()).getUsername();
-    UserDto userDetails = userService.getUserDetailsByEmail(userName);
+    String email = ((User) auth.getPrincipal()).getUsername();
+    UserDto userDetails = userService.getUserDetailsByEmail(email);
 
     String token = Jwts.builder()
         .setSubject(userDetails.getUserId())
