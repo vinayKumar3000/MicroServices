@@ -34,6 +34,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
   public void configure(HttpSecurity http) throws Exception {
 
     http.csrf().disable();
+    // Permits all paths starts with /users/** except for /users/login (Passes
+    // through CustomAuthenticationFilter)
     http.authorizeRequests().antMatchers("/users/**").permitAll().and().addFilter(getAuthenticationFilter());
     http.headers().frameOptions().disable();
 

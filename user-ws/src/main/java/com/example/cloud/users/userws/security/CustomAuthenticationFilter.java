@@ -26,6 +26,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+//executed only for login url when u permit all
 public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
   private UserService userService;
