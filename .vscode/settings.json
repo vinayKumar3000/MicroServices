@@ -1,5 +1,5 @@
 {
-  "java.project.sourcePaths": ["spring-cloud-api-gateway"],
+  "java.project.sourcePaths": [],
   "java.dependency.packagePresentation": "flat",
   "java.configuration.updateBuildConfiguration": "automatic"
 }
