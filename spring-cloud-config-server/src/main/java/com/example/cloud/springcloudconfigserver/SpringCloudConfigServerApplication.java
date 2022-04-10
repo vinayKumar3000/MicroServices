@@ -2,6 +2,7 @@ package com.example.cloud.springcloudconfigserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 //config server gets higher priority than local application.properties file
 //add spring-cloud-config-server pom.xml
